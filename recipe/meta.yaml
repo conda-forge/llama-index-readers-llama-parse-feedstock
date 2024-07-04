@@ -1,5 +1,5 @@
 {% set name = "llama-index-readers-llama-parse" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index_readers_llama_parse-{{ version }}.tar.gz
-  sha256: 78608b193c818894aefeee0aa303f02b7f80f2e4caf13866c2fd3b0b1023e2c0
+  sha256: 04f2dcfbb0fb87ce70890f5a2f4f89941d79be6a818b43738f053560e4b451cf
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8.1,<4.0
     - llama-index-core >=0.10.7,<0.11.0
-    - llama-parse >=0.4.0,<0.5.0
+    - llama-parse >=0.4.0
 
 test:
   imports:
