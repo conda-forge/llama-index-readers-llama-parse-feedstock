@@ -1,5 +1,6 @@
 {% set name = "llama-index-readers-llama-parse" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +8,21 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index_readers_llama_parse-{{ version }}.tar.gz
-  sha256: e99ec56f4f8546d7fda1a7c1ae26162fb9acb7ebcac343b5abdb4234b4644e0f
+  sha256: 891b21fb63fe1fe722e23cfa263a74d9a7354e5d8d7a01f2d4040a52f8d8feef
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core
+    - hatchling
     - pip
   run:
     - python >={{ python_min }},<4.0
-    - llama-index-core >=0.12.0,<0.13.0
+    - llama-index-core >=0.13.0,<0.14
     - llama-parse >=0.5.0
 
 test:
