@@ -1,5 +1,5 @@
 {% set name = "llama-index-readers-llama-parse" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index_readers_llama_parse-{{ version }}.tar.gz
-  sha256: 66eb378632522170a4190bb9691ba2d74c4a475becbf5bad4e88a0cb5b7159a2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/llama_index_readers_llama_parse-{{ version }}.tar.gz
+  sha256: 7cce6e12b0fff514884809c520d8b5bb64353d35fc0192ca26cae68ae092a789
 
 build:
   noarch: python
