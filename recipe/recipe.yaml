@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: llama-index-readers-llama-parse
-  version: 0.7.0
+  version: "0.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/llama_index_readers_llama_parse-${{ version }}.tar.gz
-  sha256: 7cce6e12b0fff514884809c520d8b5bb64353d35fc0192ca26cae68ae092a789
+  sha256: 34b85b942e0acd4b17db60d588289eabb9f61cc19d7ba55788a1703f1dc4391f
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
